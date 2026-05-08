@@ -1,0 +1,166 @@
+/* Variáveis para facilitar as cores (vai nos ajudar com o tema claro/escuro depois) */
+:root {
+    --cor-fundo: #f4f4f9;
+    --cor-texto: #333333;
+    --cor-primaria: #0056b3;
+    --cor-secundaria: #ffffff;
+    --cor-cabecalho: #222222;
+}
+
+/* Reset básico para remover margens padrão dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navegação suave (Para o efeito de deslizar no Single Page) */
+html {
+    scroll-behavior: smooth;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Cabeçalho Fixo no topo */
+header {
+    background-color: var(--cor-cabecalho);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4da6ff;
+}
+
+/* Ajuste para as seções não ficarem escondidas atrás do menu fixo */
+main section {
+    padding-top: 100px; /* Compensa a altura do menu e dá um respiro */
+    padding-bottom: 60px; /* Espaço flexível no fim da seção */
+    min-height: auto; /* Remove a obrigação de ocupar a tela toda */
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilização básica de títulos e textos */
+h1 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cor-primaria);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+p, ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Grid do Portfólio (Deixa os projetos lado a lado) */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.projeto-card {
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px); /* Efeito de pular ao passar o mouse */
+}
+
+.projeto-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: var(--cor-secundaria);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-cabecalho);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
