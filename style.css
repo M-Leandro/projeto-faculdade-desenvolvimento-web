@@ -164,3 +164,9 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+
+/* Ajuste para a lista de formação ficar centralizada, mas alinhada corretamente */
+#formacao ul {
+    display: inline-block; /* Faz a caixa da lista "encolher" para abraçar o texto */
+    text-align: left; /* Mantém as bolinhas e o texto alinhados à esquerda dentro do bloco */
+}
