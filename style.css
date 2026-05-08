@@ -167,6 +167,7 @@ footer {
 
 /* Ajuste para a lista de formação ficar centralizada, mas alinhada corretamente */
 #formacao ul {
-    display: inline-block; /* Faz a caixa da lista "encolher" para abraçar o texto */
-    text-align: left; /* Mantém as bolinhas e o texto alinhados à esquerda dentro do bloco */
+    display: table; /* Força a lista a ir para a linha de baixo, mas abraçando o tamanho do texto */
+    margin: 0 auto; /* Centraliza essa caixa perfeitamente na tela */
+    text-align: left; /* Mantém as bolinhas e o texto alinhados à esquerda */
 }
