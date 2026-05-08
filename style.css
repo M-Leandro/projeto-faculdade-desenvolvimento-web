@@ -171,3 +171,14 @@ footer {
     margin: 0 auto; /* Centraliza essa caixa perfeitamente na tela */
     text-align: left; /* Mantém as bolinhas e o texto alinhados à esquerda */
 }
+
+/* Tema Escuro Automático */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-fundo: #121212;
+        --cor-texto: #e0e0e0;
+        --cor-secundaria: #1e1e1e;
+        --cor-cabecalho: #000000;
+        --cor-primaria: #4da6ff; /* Deixando o azul um pouco mais claro para destacar no fundo escuro */
+    }
+}
